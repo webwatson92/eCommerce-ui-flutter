@@ -29,28 +29,30 @@ class HomePage extends StatelessWidget {
           ),
           child: Column(children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
+              margin: EdgeInsets.symmetric(horizontal: 30),
               padding: EdgeInsets.symmetric(horizontal: 15),
               height: 50,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30)
               ),
-              child: Row(children: [
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
                 Container(
                   margin: EdgeInsets.only(left: 5),
-                  height: 50,
-                  width: 300,
+                  height: 30,
+                  width: MediaQuery.of(context).size.width,
                   child: const TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Rechercher une maison...",
+                      hintText: "Rechercher...",
                     ),
                   ),
                 ),
-                Spacer(),
+                // Spacer(),
                 const Icon(
-                  Icons.camera_alt, size: 27, color: Coloors.principalColor,),
+                  Icons.search, size: 0, color: Coloors.principalColor,),
               ],),
             ),
             //catégories

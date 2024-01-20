@@ -78,7 +78,7 @@ class ArticleWidget extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                child: const Text('la description courte du produit', 
+                child: const Text('la description', 
                 style: TextStyle(
                     fontSize:15,
                     color: Coloors.principalColor
