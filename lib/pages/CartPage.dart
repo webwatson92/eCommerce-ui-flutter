@@ -1,7 +1,9 @@
 import 'package:abeyah_app/utils/coloors.dart';
 import 'package:abeyah_app/widgets/CartAppBar.dart';
+import 'package:abeyah_app/widgets/CartBottomNavBar.dart';
 import 'package:abeyah_app/widgets/CartItemsSamples.dart';
 import 'package:flutter/material.dart';
+
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -14,8 +16,8 @@ class CartPage extends StatelessWidget {
           CartAppBar(),
 
           Container(
-            height: 700,
-            padding: EdgeInsets.only(top: 15),
+            height: 560,
+            padding: EdgeInsets.only(top: 5),
             decoration: const BoxDecoration(
               color: Coloors.backgroundColor,
               borderRadius: BorderRadius.only(
@@ -27,11 +29,11 @@ class CartPage extends StatelessWidget {
                 children: [
                   CartItemsSamples(),
                   Container(
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(10),
-                    // ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     margin: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
                         Container(
@@ -39,16 +41,28 @@ class CartPage extends StatelessWidget {
                             color: Color(0xFF4C53A5),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Icon(Icons.add, color: Colors.white),
-                        )
+                          child: const Icon(Icons.add, color: Colors.white),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal:10),
+                          child: Text("Ajouter le code coupon", 
+                            style: TextStyle(
+                              color: Color(0xFF4C53A5),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
+                
                 ],
             ),
-          )
+          ),
         ],
       ),
+      bottomNavigationBar: CartBottomNavBar(),
     );
   }
 }

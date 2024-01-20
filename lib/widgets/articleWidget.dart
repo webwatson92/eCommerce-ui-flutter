@@ -1,3 +1,4 @@
+import 'package:abeyah_app/pages/ItemPage.dart';
 import 'package:abeyah_app/utils/coloors.dart';
 import 'package:flutter/material.dart';
 
@@ -49,10 +50,18 @@ class ArticleWidget extends StatelessWidget {
               ],
               ),
               InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
                 child: Container(
                   margin: EdgeInsets.all(8),
-                  child: Image.asset("assets/images/$i.png", height: 110, width: 110,),
+                  child: Image.asset("assets/images/$i.png", 
+                    height: 110, 
+                    width: 110,
+                  ),
                 ),
               ),
               Container(
